@@ -16,28 +16,33 @@
 <body>
     <h1>Weather Dashboard</h1>
     <main>
+        <div class="col">
+            <div class="container input-group">
+
+                <input id="cityInput" type="search" class="form-control-md rounded" placeholder="Search"
+                    aria-label="Search" aria-describedby="search-addon" />
+                <button type="button" class="btn btn-outline-primary">search</button>
+            </div>
+        </div>
+
         <div class="container">
             <div class="row">
-                <div class="col">
+                <!-- <div class="col">
                     <div id="" class="container input-group">
 
                         <input type="search" class="form-control-md rounded" placeholder="Search" aria-label="Search"
                             aria-describedby="search-addon" />
                         <button type="button" class="btn btn-outline-primary">search</button>
                     </div>
-                </div>
-                <div class="col">
-                    <div class="card" style="width: 18rem;">
-                        <div class="card-header">
-                            Featured
-                        </div>
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">An item</li>
-                            <li class="list-group-item">A second item</li>
-                            <li class="list-group-item">A third item</li>
-                        </ul>
+                </div> -->
+
+
+                <div class="card">
+                    <div id="weatherCard" class="card-body">
+
                     </div>
                 </div>
+
             </div>
             <div class="row">
                 <div id="currentWeather" class="col">

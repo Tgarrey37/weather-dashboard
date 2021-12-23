@@ -1,5 +1,5 @@
 var apiKey = "f79e3e82fc040e4a8f219c6cb09a3b88";
-
+var searchButton = document.querySelector("button");
 function currentWeatherAPI(city) {
   var url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
   fetch(url)
@@ -15,11 +15,22 @@ function currentWeatherAPI(city) {
       img.setAttribute("src", imageSource);
       var currentWeatherDIV = document.querySelector("#currentWeather");
       currentWeatherDIV.append(img);
+
+      // searchButton.addEventListener("click", function () {
+      var card = document.getElementById("weatherCard");
+      card.innerHTML = "";
+      var cityName = document.createElement("h2");
+      cityName.textContent = data.name;
+      var humidityEl = document.createElement("p");
+      humidityEl.textContent = data.main.humidity;
+      card.append(cityName, humidityEl);
+      // humidityEl.append("#weatherCard");
+      console.log(humidityEl);
+      // });
       //   card current weather
     });
 }
 // this is my call for current weather.
-currentWeatherAPI("mesa");
 
 function oneCallAPI(latitude, longitude) {
   var url = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=minutely,hourly,alerts&appid=${apiKey}&units=imperial`;
@@ -33,3 +44,12 @@ function oneCallAPI(latitude, longitude) {
     });
   // uvi, color and 5 day forecast
 }
+
+searchButton.addEventListener("click", function () {
+  var cityInput = document.getElementById("cityInput").value;
+  currentWeatherAPI(cityInput);
+});
+//   var humidityEl = data.main.humidity;
+//   humidityEl.append("weatherCard");
+//   console.log(humidityEl);
+// });
