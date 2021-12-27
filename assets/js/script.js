@@ -19,11 +19,18 @@ function currentWeatherAPI(city) {
       // searchButton.addEventListener("click", function () {
       var card = document.getElementById("weatherCard");
       card.innerHTML = "";
+      var forecastDate = document.createElement("h1");
+      forecastDate.textContent = 
       var cityName = document.createElement("h2");
       cityName.textContent = data.name;
+      var tempEl = document.createElement("p");
+       tempEl.textContent = data.main.temp;
       var humidityEl = document.createElement("p");
       humidityEl.textContent = data.main.humidity;
-      card.append(cityName, humidityEl);
+      var windEl = document.createElement("p");
+      windEl.textContent = data.wind.speed;
+      
+      card.append(cityName, humidityEl, tempEl, windEl);
       // humidityEl.append("#weatherCard");
       console.log(humidityEl);
       // });
