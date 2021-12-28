@@ -1,16 +1,32 @@
+.hidden{
+  display: none;
+}
+
+main{
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+
+.weatherh1{
+  text-align: center;
+  background-color: blueviolet;
+
+}
+
 #weatherCard {
   /* width: 200px;
   height: 200px; */
 }
 
 .input-group {
-  margin-right: 600px;
-  margin-top: 0px;
+  /* margin-right: 600px;
+  margin-top: 0px; */
 }
 
 .card {
-  margin-top: 0px;
+  /* margin-top: 0px;
   margin-left: 200px;
   width: 50%;
-  height: 200px;
+  height: 200px; */
 }
